@@ -60,7 +60,7 @@ header nav ul li a:hover {
     width: var(--linkedin-icon-size);
     height: var(--linkedin-icon-size);
     vertical-align: middle;
-    margin-left: 8px; /* Add space between Contact and LinkedIn icon */
+    margin-left: 8px; /* Space between Contact and LinkedIn icon */
 }
 
 /* Hero Section with Background Image */
@@ -98,19 +98,39 @@ header nav ul li a:hover {
 }
 
 /* About Page Styles */
-.profile-pic {
-    width: 150px; /* Resize the profile picture */
-    height: 150px; /* Maintain square aspect ratio */
-    border-radius: 50%; /* Circular profile picture */
-    margin: 20px auto; /* Center the profile picture */
-    display: block;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for aesthetic */
+.about-section {
+    display: flex; /* Two-column Flexbox layout */
+    align-items: center; /* Vertically align items */
+    justify-content: center; /* Center the layout */
+    gap: 2rem; /* Space between the image and text */
+    padding: 2rem;
+}
+
+.about-image img {
+    width: 200px; /* Fixed width for the image */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Slight rounding for corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for aesthetics */
+}
+
+.about-text {
+    max-width: 600px; /* Limit the width of the text section */
+    text-align: left;
+}
+
+.about-text h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.about-text p {
+    line-height: 1.6;
 }
 
 /* Contact Form */
 form {
-    max-width: 500px; /* Limit form width */
-    margin: 0 auto; /* Center the form */
+    max-width: 500px; /* Center and limit form width */
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
     gap: 1rem; /* Add spacing between form elements */
@@ -140,7 +160,7 @@ form button {
 }
 
 form button:hover {
-    background: #0056b3; /* Darker shade for hover effect */
+    background: #0056b3; /* Darker shade for hover */
 }
 
 /* Footer Styles */
@@ -172,15 +192,23 @@ footer {
         font-size: 1rem;
     }
 
-    .profile-pic {
-        width: 120px; /* Smaller size for mobile */
-        height: 120px;
+    .about-section {
+        flex-direction: column; /* Stack image and text vertically */
+        text-align: center;
+    }
+
+    .about-image img {
+        width: 150px; /* Reduce image size */
+    }
+
+    .about-text {
+        text-align: center; /* Center-align text */
     }
 }
 
 @media (max-width: 480px) {
     header nav ul {
-        gap: 5px; /* Further reduce spacing on small screens */
+        gap: 5px; /* Further reduce spacing */
     }
 
     .linkedin-icon {
