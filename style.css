@@ -59,8 +59,8 @@ header nav ul li a:hover {
 .linkedin-icon {
     width: var(--linkedin-icon-size);
     height: var(--linkedin-icon-size);
-    vertical-align: middle;
-    margin-left: 5px;
+    vertical-align: middle; /* Align the icon with the text */
+    margin-left: 8px; /* Add space between Contact text and the icon */
 }
 
 /* Hero Section with Background Image */
